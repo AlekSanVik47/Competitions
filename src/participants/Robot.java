@@ -1,8 +1,6 @@
 package participants;
 
-import actions.Jump;
 import actions.Participant;
-import actions.RunAway;
 
 import java.util.StringJoiner;
 
@@ -18,13 +16,13 @@ public class Robot implements Participant {
 
     @Override
     public double jumpOver() {
-        System.out.printf("Робот %s прыгнул на высоту %d%n", serialNumber, canJump);
+        System.out.printf("%nРобот %s прыгнул на высоту %.2f%n", serialNumber, canJump);
         return canJump;
     }
 
     @Override
     public double ran() {
-        System.out.printf("Робот %s пробежал %d%n", serialNumber, canRun);
+        System.out.printf("%nРобот %s пробежал %.2f%n", serialNumber, canRun);
         return canRun;
     }
 

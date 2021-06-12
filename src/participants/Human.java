@@ -1,8 +1,6 @@
 package participants;
 
-import actions.Jump;
 import actions.Participant;
-import actions.RunAway;
 
 import java.util.StringJoiner;
 
@@ -19,7 +17,7 @@ public class Human implements Participant {
                 .toString();
     }
 
-    public Human(String name, double canJump, double canRun) {
+    public Human(String name, int canRun, double canJump) {
         this.name = name;
         this.canJump = canJump;
         this.canRun = canRun;
@@ -28,13 +26,13 @@ public class Human implements Participant {
 
     @Override
     public double jumpOver() {
-        System.out.printf("Человек %s прыгнул на высоту %d%n", name, canJump);
+        System.out.printf("%nЧеловек %s прыгнул на высоту %.2f%n", name, canJump);
         return canJump;
     }
 
     @Override
     public double ran() {
-        System.out.printf("Человек %s пробежал %d%n", name, canRun);
+        System.out.printf("%nЧеловек %s пробежал %.2f%n", name, canRun);
         return canRun;
     }
 }
