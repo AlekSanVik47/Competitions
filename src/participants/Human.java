@@ -5,8 +5,8 @@ import actions.Participant;
 import java.util.StringJoiner;
 
 public class Human implements Participant {
-    String name;
-    double canJump, canRun;
+    private final String name;
+    private final double canJump, canRun;
 
     @Override
     public String toString() {

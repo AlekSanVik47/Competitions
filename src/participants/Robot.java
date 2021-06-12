@@ -5,8 +5,8 @@ import actions.Participant;
 import java.util.StringJoiner;
 
 public class Robot implements Participant {
-    String serialNumber;
-    double canJump, canRun;
+    private final String serialNumber;
+    private final double canJump, canRun;
 
     public Robot(String serialNumber, double canJump, double canRun) {
         this.serialNumber = serialNumber;

@@ -5,8 +5,8 @@ import actions.Participant;
 import java.util.StringJoiner;
 
 public class Cat implements Participant {
-    String nickname;
-    double canJump, canRun;
+    private final String nickname;
+    private final double canJump, canRun;
 
     public Cat(String nickname, double canRun, double canJump) {
         this.nickname = nickname;
