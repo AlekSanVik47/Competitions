@@ -17,10 +17,10 @@ public class Treadmill implements Obstacle {
     @Override
     public boolean overcoming(Participant participant) {
         if (participant.ran()>= isLong) {
-            System.out.printf("Участник %s успешно пробежал дистанцию", participant);
+            System.out.printf("%nУчастник %s успешно пробежал дистанцию%n", participant);
             return true;
         } else {
-            System.out.printf("Участник %s не смог пробежать дистанцию", participant);
+            System.out.printf("%nУчастник %s не смог пробежать дистанцию%n", participant);
             return false;
         }
     }

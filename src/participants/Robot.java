@@ -16,13 +16,13 @@ public class Robot implements Participant {
 
     @Override
     public double jumpOver() {
-        System.out.printf("%nРобот %s прыгнул на высоту %f%n", serialNumber, canJump);
+        System.out.printf("%nРобот %s прыгнул на высоту %.2f%n", serialNumber, canJump);
         return canJump;
     }
 
     @Override
     public double ran() {
-        System.out.printf("%nРобот %s пробежал %f%n", serialNumber, canRun);
+        System.out.printf("%nРобот %s пробежал %.2f%n", serialNumber, canRun);
         return canRun;
     }
 

@@ -10,14 +10,17 @@ import java.util.Random;
 
 public class Main {
     private static Competition creatingCompetition(){
-        Participant cat = new Cat("Baris", 1.5, 100);
+        Participant cat = new Cat("Baris", 100, 1.5);
         Participant human = new Human("Jon",1000, 1);
-        Participant robot = new Robot("JS123", 500,1.9);
+        Participant robot = new Robot("JS123", 1.9,500);
 
-        Random rnd = new Random();
+       /* Random rnd = new Random();
+
+        Treadmill treadmill = new Treadmill(rnd.nextDouble());
+        Wall wall = new Wall(rnd.nextDouble());*/
 
         Treadmill treadmill = new Treadmill(300);
-        Wall wall = new Wall(1.1);
+        Wall wall = new Wall(0.9);
 
         Competition competition = new Competition("Веселые старты");
         competition.setParticipants(cat, human, robot);
@@ -30,7 +33,7 @@ public class Main {
         System.out.println("Начинаем соревнования!!!");
         competition.startCompetition();
 
-        System.out.println("Соревнование окончено наши победители: ");
+        System.out.printf("%nСоревнование окончено наши победители: %n");
         for (Participant winner: competition.getWinners()){
             System.out.println(winner);
         }

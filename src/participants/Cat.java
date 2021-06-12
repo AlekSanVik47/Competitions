@@ -8,7 +8,7 @@ public class Cat implements Participant {
     String nickname;
     double canJump, canRun;
 
-    public Cat(String nickname, double jump, double canJump) {
+    public Cat(String nickname, double canRun, double canJump) {
         this.nickname = nickname;
         this.canJump = canJump;
         this.canRun = canRun;
@@ -18,13 +18,13 @@ public class Cat implements Participant {
 
     @Override
     public double jumpOver() {
-        System.out.printf("%nКот %s прыгнул на высоту %f%n", nickname, canJump);
+        System.out.printf("%nКот %s прыгнул на высоту %.2f%n", nickname, canJump);
         return canJump;
     }
 
     @Override
     public double ran() {
-        System.out.printf("%nКот %s пробежал %f%n", nickname, canRun);
+        System.out.printf("%nКот %s пробежал %.2f%n", nickname, canRun);
         return canRun;
     }
 

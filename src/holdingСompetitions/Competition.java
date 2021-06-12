@@ -33,7 +33,7 @@ public class Competition {
         for (Participant participant : participants) {
             boolean success = passAllObstacles(participant);
             if (!success) {
-                System.out.printf("Участник %s покинул соревнование", participant);
+                System.out.printf("Участник %s покинул соревнование%n", participant);
             } else {
                 winners.add(participant);
             }
